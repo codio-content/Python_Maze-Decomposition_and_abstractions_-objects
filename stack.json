@@ -1,0 +1,1 @@
+{"stack":[["createEmptyMaze",12,8],["addWall",1,1],["addWall",4,2],["addWall",6,2],["addWall",5,5],["addGoal",null,null],["addGoal",10,1],["addPlayer",null,null],["addPlayer",1,6]],"steps":14,"score":4,"energy":10,"wallCount":4,"monsterCount":0,"energyCount":0,"goalCount":1}

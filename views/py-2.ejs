@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>One</title>
+    
+    <% include include/game.ejs %>    
+ 
+    <script>  
+
+      function userScriptLoaded() {
+
+        var turnTaken = module.tp$getattr('turnTaken');    
+        
+        var _oldEndOfTurnEvent = _endOfTurnEvent;
+        
+        endOfTurn (function() {
+          _oldEndOfTurnEvent();
+          if(turnTaken) {
+            Sk.misceval.callsim(turnTaken);
+          }        
+        })    
+        createRandomMaze(12, 8)
+      }       
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        importPythonGame();
+        loadUserScript('/py/py-2.py')        
+      })  
+    </script>
+    
+  </head>
+  <body>
+    <div id="game"></div>
+  </body>
+</html>

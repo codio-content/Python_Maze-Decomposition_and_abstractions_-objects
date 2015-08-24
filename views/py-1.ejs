@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>One</title>
+    
+    <% include include/game.ejs %>    
+ 
+    <script>  
+      
+      function userScriptLoaded() {
+        
+        var keyPressedEvent = module.tp$getattr('keyPressedEvent');
+        
+        keyPressed (function (keyCode) {
+          if ( keyCode == 'LEFT' ) {
+            player.moveLeft()
+          } 
+          if ( keyCode == 'RIGHT' ) {
+            player.moveRight()
+          } 
+          if ( keyCode == 'UP' ) {
+            player.moveUp()
+          } 
+          if ( keyCode == 'DOWN' ) {
+            player.moveDown()
+          }  
+          
+          if(keyPressedEvent) {
+            Sk.misceval.callsim(keyPressedEvent, new Sk.builtin.str(keyCode));
+          }  
+       
+        })
+        createEmptyMaze()
+        addPlayer()
+      } 
+                  
+      document.addEventListener('DOMContentLoaded', function() {    
+        importPythonGame();
+
+        loadUserScript('/py/py-1.py')
+        
+      })    
+    </script>
+    
+  </head>
+  <body>
+    <div id="game"></div>
+  </body>
+</html>
