@@ -1,6 +1,6 @@
 **How can information and functions be 'packaged' inside objects?**
 
-- The public GitHub repository for this unit can be found at [https://github.com/codio-content/Javascript_Maze-Decomposition_and_abstractions_-objects](Javascript_Maze-Decomposition_and_abstractions_-objects).
+- The public GitHub repository for this unit can be found at [https://github.com/codio-content/Python_Maze-Decomposition_and_abstractions_-objects](Python_Maze-Decomposition_and_abstractions_-objects).
 
 - For more information on other units and modules in the Computational Thinking - Create a maze game course go to [Course-:-Computational-Thinking](https://github.com/codio-content/Information/wiki/Course-:-Computational-Thinking)
 
